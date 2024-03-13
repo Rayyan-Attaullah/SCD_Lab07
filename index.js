@@ -11,7 +11,7 @@ let tasks = [];
 let users = [];
 
 
-app.post('/register', (req, res) => 
+app.post('/signup', (req, res) => 
 {
 
     const { username, password } = req.body;
@@ -38,7 +38,7 @@ app.post('/login', (req, res) =>
 
 });
 
-app.post('/tasks', (req, res) => 
+app.post('/add-task', (req, res) => 
 {
 
     const { title, description, dueDate, category, priority } = req.body;
@@ -52,7 +52,7 @@ app.post('/tasks', (req, res) =>
 
 
 
-app.get('/tasks', (req, res) =>
+app.get('/all-tasks', (req, res) =>
 {
 
 
@@ -120,5 +120,5 @@ app.listen(PORT, () =>
 {
 
     console.log(`Server running on port ${PORT}`);
-    
+
 });
